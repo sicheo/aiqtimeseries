@@ -2,9 +2,9 @@ import * as Redis from "ioredis";
 import { CommandData } from "./interface/commandData";
 
 export class CommandReceiver {
-    protected readonly client: Redis.Redis;
+    protected readonly client: Redis.Cluster;
 
-    constructor(client: Redis.Redis) {
+    constructor(client: Redis.Cluster) {
         this.client = client;
     }
 

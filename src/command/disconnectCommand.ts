@@ -2,9 +2,9 @@ import * as Redis from "ioredis";
 import { CommandInterface } from "./interface/command";
 
 export class DisconnectCommand implements CommandInterface {
-    protected readonly receiver: Redis.Redis;
+    protected readonly receiver: Redis.Cluster;
 
-    constructor(receiver: Redis.Redis) {
+    constructor(receiver: Redis.Cluster) {
         this.receiver = receiver;
     }
 
