@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\src"
+    "\\src",
+    "\\src\\__tests__",
+    "\\src\\__tests__\\integration"
   ],
-  "SelectedNode": "\\src\\index.ts",
+  "SelectedNode": "\\package.json",
   "PreviewInSolutionExplorer": false
 }

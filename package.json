@@ -1,9 +1,10 @@
 {
   "name": "timeseries",
-  "version": "1.2.3",
+  "version": "1.0",
   "description": "Javascript RedisTimeSeries client",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
+  "private": true,
   "scripts": {
     "test": "jest -i --config jest.config.js --coverage",
     "test:watch": "jest -i --config jest.config.js --coverage --watchAll",
