@@ -3,6 +3,7 @@ import { Aggregation } from "../entity/aggregation";
 import { InfoResponse } from "./interface/infoResponse";
 import { AggregationByKey } from "./interface/aggregationByKey";
 
+
 export class InfoResponseRender {
     public render(response: any[]): InfoResponse {
         const labels: Label[] = [];
