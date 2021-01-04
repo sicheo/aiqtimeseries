@@ -15,11 +15,11 @@ export class RedisTimeSeriesFactory {
         db: 0
     };
 
-    protected startupNodes = [{host:'127.0.0.1',port:7000}]
+    protected startupNodes = [{ host: "127.0.0.1", port: 7000 }];
 
-    constructor(startupNodes:any,options: ConnectionOptions = {}) {
+    constructor(startupNodes: any, options: ConnectionOptions = {}) {
         this.options = { ...this.options, ...options };
-        this.startupNodes = startupNodes
+        this.startupNodes = startupNodes;
     }
 
     public create(): RedisTimeSeries {
@@ -37,6 +37,6 @@ export class RedisTimeSeriesFactory {
     }
 
     protected getRedisClient(): Redis.Cluster {
-        return new Redis.Cluster(this.startupNodes,this.options);
+        return new Redis.Cluster(this.startupNodes, this.options);
     }
 }

@@ -1,6 +1,6 @@
 {
   "name": "timeseries",
-  "version": "1.0",
+  "version": "",
   "description": "Javascript RedisTimeSeries client",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -22,11 +22,7 @@
     "url": "git+https://github.com/sicheo/timeseries.git"
   },
   "keywords": [
-    "redis",
-    "redistimeseries",
-    "redislabs",
     "timeseries",
-    "javascript",
     "typescript"
   ],
   "author": "",
