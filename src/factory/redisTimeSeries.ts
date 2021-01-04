@@ -9,15 +9,18 @@ import { RequestParamsBuilder } from "../builder/requestParamsBuilder";
 import { ConnectionOptions } from "../index";
 
 export class RedisTimeSeriesFactory {
-    protected options: ConnectionOptions = {
-        port: 6379,
-        host: "127.0.0.1",
-        db: 0
+    protected options: any = {
+        redisOptions:
+        {
+            port: 6379,
+            host: "127.0.0.1",
+            db: 0
+        }
     };
 
     protected startupNodes = [{ host: "127.0.0.1", port: 7000 }];
 
-    constructor(startupNodes: any, options: ConnectionOptions = {}) {
+    constructor(startupNodes: any, options: any = {}) {
         this.options = { ...this.options, ...options };
         this.startupNodes = startupNodes;
     }
