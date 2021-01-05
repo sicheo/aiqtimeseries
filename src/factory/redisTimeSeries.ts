@@ -18,6 +18,8 @@ export class RedisTimeSeriesFactory {
         }
     };
 
+    protected commprov:CommandProvider|null = null
+
     protected startupNodes = [{ host: "127.0.0.1", port: 7000 }];
 
     constructor(startupNodes: any, options: any = {}) {
@@ -27,6 +29,7 @@ export class RedisTimeSeriesFactory {
 
     public create(): RedisTimeSeries {
         const commandProvider: CommandProvider = new CommandProvider(this.getRedisClient());
+        this.commprov = commandProvider;
         const commandReceiver: CommandReceiver = new CommandReceiver(commandProvider.getRTSClient());
         const director: RequestParamsDirector = new RequestParamsDirector(new RequestParamsBuilder());
 
@@ -37,6 +40,10 @@ export class RedisTimeSeriesFactory {
             director,
             new RenderFactory()
         );
+    }
+
+    public getCommandProvider(): CommandProvider|null {
+        return this.commprov
     }
 
     protected getRedisClient(): Redis.Cluster {
