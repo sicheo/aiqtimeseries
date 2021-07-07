@@ -2,10 +2,14 @@
   "ExpandedNodes": [
     "",
     "\\src",
+    "\\src\\builder",
     "\\src\\command",
     "\\src\\factory",
-    "\\src\\response"
+    "\\src\\response",
+    "\\src\\__tests_config__",
+    "\\src\\__tests__",
+    "\\src\\__tests__\\unit\\factory"
   ],
-  "SelectedNode": "\\src\\command\\commandProvider.ts",
+  "SelectedNode": "\\src\\command\\interface",
   "PreviewInSolutionExplorer": false
 }

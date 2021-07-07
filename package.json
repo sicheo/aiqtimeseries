@@ -1,13 +1,13 @@
 {
-  "name": "timeseries",
+  "name": "aiqtimeseries",
   "version": "1.2.7",
   "description": "Javascript RedisTimeSeries client",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "private": true,
   "scripts": {
-    "test": "jest -i --config jest.config.js --coverage",
-    "test:watch": "jest -i --config jest.config.js --coverage --watchAll",
+    "test": "echo \"No test specified\"",
+    "test:watch": "echo \"No test specified\"",
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "eslint \"src/**\"",
@@ -25,7 +25,7 @@
     "timeseries",
     "typescript"
   ],
-  "author": "",
+  "author": "p. pulicani",
   "license": "MIT",
   "homepage": "https://github.com/sicheo/aiqtimeseries",
   "dependencies": {

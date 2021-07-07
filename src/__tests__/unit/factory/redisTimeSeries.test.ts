@@ -19,7 +19,7 @@ const options: ConnectionOptions = {
 };
 
 it("Factory creates a RedisTimeSeries object", () => {
-    const factory = new RedisTimeSeriesFactory();
+    const factory = new RedisTimeSeriesFactory([]);
     const redisTimeSeries = factory.create();
 
     expect(CommandProvider).toHaveBeenCalledTimes(1);
