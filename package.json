@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sicheo/timeseries.git"
+    "url": "git+https://github.com/sicheo/aiqtimeseries.git"
   },
   "keywords": [
     "timeseries",
@@ -27,7 +27,7 @@
   ],
   "author": "",
   "license": "MIT",
-  "homepage": "https://github.com/sicheo/timeseries",
+  "homepage": "https://github.com/sicheo/aiqtimeseries",
   "dependencies": {
     "ioredis": "^4.19.4"
   },
