@@ -4,7 +4,7 @@
   "description": "Javascript RedisTimeSeries client",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
-  "private": true,
+  "private": false,
   "scripts": {
     "test": "echo \"No test specified\"",
     "test:watch": "echo \"No test specified\"",

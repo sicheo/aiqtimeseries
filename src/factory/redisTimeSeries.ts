@@ -6,19 +6,17 @@ import { CommandProvider } from "../command/commandProvider";
 import { CommandInvoker } from "../command/commandInvoker";
 import { CommandReceiver } from "../command/commandReceiver";
 import { RequestParamsBuilder } from "../builder/requestParamsBuilder";
-import { ConnectionOptions } from "../index";
 
 export class RedisTimeSeriesFactory {
-    protected options: any = {
-        redisOptions:
-        {
+    protected options = {
+        redisOptions: {
             port: 6379,
             host: "127.0.0.1",
             db: 0
         }
     };
 
-    protected commprov:CommandProvider|null = null
+    protected commprov: CommandProvider | null = null;
 
     protected startupNodes = [{ host: "127.0.0.1", port: 7000 }];
 
@@ -42,8 +40,8 @@ export class RedisTimeSeriesFactory {
         );
     }
 
-    public getCommandProvider(): CommandProvider|null {
-        return this.commprov
+    public getCommandProvider(): CommandProvider | null {
+        return this.commprov;
     }
 
     protected getRedisClient(): Redis.Cluster {
