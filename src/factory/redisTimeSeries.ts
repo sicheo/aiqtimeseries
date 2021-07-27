@@ -25,19 +25,23 @@ export class RedisTimeSeriesFactory {
         this.startupNodes = startupNodes;
     }
 
-    public create(): RedisTimeSeries {
-        const commandProvider: CommandProvider = new CommandProvider(this.getRedisClient());
-        this.commprov = commandProvider;
-        const commandReceiver: CommandReceiver = new CommandReceiver(commandProvider.getRTSClient());
-        const director: RequestParamsDirector = new RequestParamsDirector(new RequestParamsBuilder());
+    public create(): RedisTimeSeries|any {
+        try {
+            const commandProvider: CommandProvider = new CommandProvider(this.getRedisClient());
+            this.commprov = commandProvider;
+            const commandReceiver: CommandReceiver = new CommandReceiver(commandProvider.getRTSClient());
+            const director: RequestParamsDirector = new RequestParamsDirector(new RequestParamsBuilder());
 
-        return new RedisTimeSeries(
-            commandProvider,
-            commandReceiver,
-            new CommandInvoker(),
-            director,
-            new RenderFactory()
-        );
+            return new RedisTimeSeries(
+                commandProvider,
+                commandReceiver,
+                new CommandInvoker(),
+                director,
+                new RenderFactory()
+            )
+        } catch (error) {
+            throw (error)
+        }
     }
 
     public getCommandProvider(): CommandProvider | null {

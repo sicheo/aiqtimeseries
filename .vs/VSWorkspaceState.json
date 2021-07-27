@@ -7,9 +7,8 @@
     "\\src\\factory",
     "\\src\\response",
     "\\src\\__tests_config__",
-    "\\src\\__tests__",
-    "\\src\\__tests__\\unit\\factory"
+    "\\src\\__tests__"
   ],
-  "SelectedNode": "\\src\\command\\interface",
+  "SelectedNode": "\\src\\response\\infoResponseRender.ts",
   "PreviewInSolutionExplorer": false
 }

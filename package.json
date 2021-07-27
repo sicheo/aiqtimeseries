@@ -1,6 +1,6 @@
 {
   "name": "aiqtimeseries",
-  "version": "1.2.7",
+  "version": "1.2.8",
   "description": "Javascript RedisTimeSeries client",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
