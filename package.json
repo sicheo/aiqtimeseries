@@ -10,7 +10,7 @@
     "test:watch": "jest -i --config jest.config.js --coverage --watchAll",
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
-    "lint": "eslint \"src/**\"",
+    "lint": "eslint --fix \"src/**\"",
     "prepare": "npm run build",
     "prepublishOnly": "npm test && npm run lint",
     "preversion": "npm run lint",

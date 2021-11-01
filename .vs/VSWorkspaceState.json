@@ -4,8 +4,10 @@
     "\\src",
     "\\src\\factory",
     "\\src\\__tests_config__",
-    "\\src\\__tests__"
+    "\\src\\__tests__",
+    "\\src\\__tests__\\unit",
+    "\\src\\__tests__\\unit\\factory"
   ],
-  "SelectedNode": "\\src\\__tests_config__\\data.ts",
+  "SelectedNode": "\\src\\__tests__\\unit\\factory\\redisTimeSeries.test.ts",
   "PreviewInSolutionExplorer": false
 }
