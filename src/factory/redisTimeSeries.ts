@@ -23,8 +23,7 @@ export class RedisTimeSeriesFactory {
 
     constructor(options: any, startupNodes?: any) {
         this.options = { ...this.options, ...options };
-        if (startupNodes)
-            this.startupNodes = startupNodes;
+        if (startupNodes) this.startupNodes = startupNodes;
     }
 
     public create(): RedisTimeSeries {
