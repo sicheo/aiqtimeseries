@@ -11,7 +11,7 @@ export const redisOptions = {
         host: "127.0.0.1",
         db: 0,
         port: 6379,
-        user:"default"
+        user: "default"
     }
 };
 export const startupOptions: any = [

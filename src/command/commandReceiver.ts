@@ -1,7 +1,7 @@
 import { CommandData } from "./interface/commandData";
 
 export class CommandReceiver {
-    protected readonly client:any;
+    protected readonly client: any;
 
     constructor(client: any) {
         this.client = client;

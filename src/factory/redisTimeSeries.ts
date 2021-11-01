@@ -21,7 +21,6 @@ export class RedisTimeSeriesFactory {
 
     protected startupNodes = [{ host: "127.0.0.1", port: 7000 }];
 
-
     constructor(options: any, startupNodes: any = {}) {
         this.options = { ...this.options, ...options };
         this.startupNodes = startupNodes;
@@ -60,7 +59,7 @@ export class RedisTimeSeriesFactory {
             if (this.options.iscluster)
                 client = new Redis.Cluster(this.startupNodes, this.options);
             else
-                client = new Redis(this.options.redisOptions.port,this.options.redisOptions.host,this.options.redisOptions)
+                client = new Redis(this.options.redisOptions.port, this.options.redisOptions.host, this.options.redisOptions)
             return client;
         } catch (error) {
             throw "Unable to connect to Redis Server: cluster " + this.options.iscluster;

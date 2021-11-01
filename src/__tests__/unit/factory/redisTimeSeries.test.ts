@@ -5,15 +5,12 @@ import { RequestParamsDirector } from "../../../builder/requestParamsDirector";
 import { RedisTimeSeries } from "../../../redisTimeSeries";
 import * as Redis from "ioredis";
 import { RequestParamsBuilder } from "../../../builder/requestParamsBuilder";
-import { redisOptions, startupOptions } from "../../../__tests_config__/data"
+import { redisOptions, startupOptions } from "../../../__tests_config__/data";
 
 jest.mock("../../../command/commandProvider");
 jest.mock("../../../command/commandReceiver");
 jest.mock("../../../builder/requestParamsDirector");
 jest.mock("ioredis");
-
-
-
 
 it("Factory creates a RedisTimeSeries object", () => {
     const factory = new RedisTimeSeriesFactory(redisOptions, startupOptions);
