@@ -21,9 +21,10 @@ export class RedisTimeSeriesFactory {
 
     protected startupNodes = [{ host: "127.0.0.1", port: 7000 }];
 
-    constructor(options: any, startupNodes: any = {}) {
+    constructor(options: any, startupNodes?: any) {
         this.options = { ...this.options, ...options };
-        this.startupNodes = startupNodes;
+        if (startupNodes)
+            this.startupNodes = startupNodes;
     }
 
     public create(): RedisTimeSeries {
