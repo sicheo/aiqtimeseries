@@ -22,6 +22,7 @@ it("Factory creates a RedisTimeSeries object", () => {
         redisOptions.redisOptions.port,
         redisOptions.redisOptions.host,
         redisOptions.redisOptions);
+
     expect(CommandReceiver).toHaveBeenCalledTimes(1);
     expect(RequestParamsDirector).toHaveBeenCalledTimes(1);
     expect(RequestParamsDirector).toHaveBeenCalledWith(new RequestParamsBuilder());
