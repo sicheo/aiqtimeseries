@@ -2,13 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\src",
-    "\\src\\builder",
-    "\\src\\command",
     "\\src\\factory",
-    "\\src\\response",
     "\\src\\__tests_config__",
     "\\src\\__tests__"
   ],
-  "SelectedNode": "\\src\\response\\infoResponseRender.ts",
+  "SelectedNode": "\\src\\__tests_config__\\data.ts",
   "PreviewInSolutionExplorer": false
 }

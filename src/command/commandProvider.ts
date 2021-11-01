@@ -4,10 +4,10 @@ import { CommandName } from "../enum/commandName";
 import { StringNumberArray } from "../index";
 
 export class CommandProvider {
-    protected readonly client: Redis.Cluster;
+    protected readonly client: any;
     protected commands: object;
 
-    constructor(redisClient: Redis.Cluster) {
+    constructor(redisClient: any) {
         this.client = redisClient;
         this.commands = {};
         this.buildCommands();
@@ -25,7 +25,7 @@ export class CommandProvider {
         };
     }
 
-    public getRTSClient(): Redis.Cluster {
+    public getRTSClient(): any {
         return this.client;
     }
 

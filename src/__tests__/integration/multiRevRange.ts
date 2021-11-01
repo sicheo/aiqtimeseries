@@ -1,5 +1,5 @@
 import { RedisTimeSeriesFactory } from "../../factory/redisTimeSeries";
-import { testOptions } from "../../__tests_config__/data";
+import { redisOptions, startupOptions } from "../../__tests_config__/data";
 import { Sample } from "../../entity/sample";
 import { Aggregation } from "../../entity/aggregation";
 import { AggregationType } from "../../enum/aggregationType";
@@ -7,7 +7,7 @@ import { TimestampRange } from "../../entity/timestampRange";
 import { Label } from "../../entity/label";
 import { FilterBuilder } from "../../builder/filterBuilder";
 
-const factory = new RedisTimeSeriesFactory(testOptions);
+const factory = new RedisTimeSeriesFactory(redisOptions, startupOptions);
 const rtsClient = factory.create();
 const date = new Date(2019, 11, 24, 19).getTime();
 
@@ -250,7 +250,7 @@ test("aggregated query multi range with timestamp range not matching", async () 
         const samples = multiRange1.data;
         const sample1 = samples.shift();
 
-        if (aggregationType === "count") {
+        if (aggregationType === "count" && sample1 !=undefined) {
             // @ts-ignore
             expect(sample1.getValue()).toEqual(0);
             // @ts-ignore

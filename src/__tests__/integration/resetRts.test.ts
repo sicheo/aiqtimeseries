@@ -1,12 +1,11 @@
 import { RedisTimeSeriesFactory } from "../../factory/redisTimeSeries";
 import { Label } from "../../entity/label";
 import { ConnectionOptions } from "../../index";
+import { redisOptions, startupOptions } from "../../__tests_config__/data";
 
-const options: ConnectionOptions = {
-    host: "redislabs-redistimeseries",
-    db: 14
-};
-const factory = new RedisTimeSeriesFactory(options);
+
+
+const factory = new RedisTimeSeriesFactory(redisOptions, startupOptions);
 const rtsClient = factory.create();
 
 const sensor1 = new Label("sensor", "1");

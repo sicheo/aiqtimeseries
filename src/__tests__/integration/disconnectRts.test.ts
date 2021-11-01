@@ -1,7 +1,7 @@
 import { RedisTimeSeriesFactory } from "../../factory/redisTimeSeries";
-import { testOptions } from "../../__tests_config__/data";
+import { redisOptions, startupOptions } from "../../__tests_config__/data";
 
-const factory = new RedisTimeSeriesFactory(testOptions);
+const factory = new RedisTimeSeriesFactory(redisOptions, startupOptions);
 const rtsClient = factory.create();
 
 afterAll(async () => {
