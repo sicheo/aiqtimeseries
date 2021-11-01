@@ -61,9 +61,9 @@ export class RedisTimeSeriesFactory {
                 client = new Redis(
                     this.options.redisOptions.port,
                     this.options.redisOptions.host,
-                    this.options.redisOptions);
+                    this.options.redisOptions
+                );
 
-                
             return client;
         } catch (error) {
             throw "Unable to connect to Redis Server: cluster " + this.options.iscluster;
