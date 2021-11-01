@@ -1,4 +1,3 @@
-import * as Redis from "ioredis";
 import { CommandData } from "./interface/commandData";
 import { CommandName } from "../enum/commandName";
 import { StringNumberArray } from "../index";

@@ -1,4 +1,3 @@
-import * as Redis from "ioredis";
 import { CommandData } from "./interface/commandData";
 
 export class CommandReceiver {
