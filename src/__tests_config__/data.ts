@@ -7,7 +7,8 @@ export const testOptions: ConnectionOptions = {
 export const redisOptions = {
     iscluster: false,
     redisOptions: {
-        password: "cwnLLXwIrFd5lxxhvYspLPeE3GIn3Ob9uT2BmY-yK3llngKlBJyfxqr6KCBeRyi+Zzw-0t4dNsMlO3+epaolo@paolo-Lenovo-E31-80",
+        password:
+            "cwnLLXwIrFd5lxxhvYspLPeE3GIn3Ob9uT2BmY-yK3llngKlBJyfxqr6KCBeRyi+Zzw-0t4dNsMlO3+epaolo@paolo-Lenovo-E31-80",
         host: "127.0.0.1",
         db: 0,
         port: 6379,

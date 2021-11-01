@@ -1,7 +1,7 @@
 import { RedisTimeSeriesFactory } from "../../factory/redisTimeSeries";
 import { redisOptions, startupOptions } from "../../__tests_config__/data";
 
-test("lazy connection", async () => {  
+test("lazy connection", async () => {
     const factory = new RedisTimeSeriesFactory(redisOptions, startupOptions);
     const rtsClient = factory.create();
     const created = await rtsClient.create("connection");

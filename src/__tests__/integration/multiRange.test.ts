@@ -247,7 +247,7 @@ test("aggregated query multi range with timestamp range not matching", async () 
         // @ts-ignore
         const samples = multiRange1.data;
         const sample1 = samples.shift();
-        
+
         if (aggregationType === "count" && sample1 != undefined) {
             // @ts-ignore
             expect(sample1.getValue()).toEqual(0);
